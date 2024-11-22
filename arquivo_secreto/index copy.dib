@@ -1,0 +1,115 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"fsharp","name":"fsharp"}]}}
+
+#!markdown
+
+# Enunciado
+Um artefato foi recuperado e possui um segredo valioso, descubra qual é, após responda no formato de flag.
+link do arquivo: https://#.com.br/files/f97fba8eae0d2d3c27b5a786aa1e57d4/disco?token=######
+    
+<img src="./images/Enunciado.png"/>
+
+#!markdown
+
+## Ferramentas
+
+### Polyglot .NET
+Polyglot .NET é uma extensão para o .NET Interactive que permite a execução de múltiplas linguagens de programação em um único notebook, como F#, C#, PowerShell, e outras. Ele é útil para criar notebooks interativos que podem combinar diferentes linguagens para análise de dados, scripts de automação, e mais.
+
+### .NET (F#, C#, PowerShell)
+- **F#**: Uma linguagem funcional de programação que roda na plataforma .NET. É conhecida por sua concisão e capacidade de lidar com problemas complexos de forma elegante.
+- **C#**: Uma linguagem de programação orientada a objetos desenvolvida pela Microsoft. É amplamente utilizada para desenvolvimento de aplicações desktop, web, e mobile.
+- **PowerShell**: Uma linguagem de script e shell de linha de comando desenvolvida pela Microsoft. É usada principalmente para automação de tarefas administrativas e gerenciamento de sistemas.
+
+### Visual Studio Code (VSCode)
+VSCode é um editor de código-fonte desenvolvido pela Microsoft. Ele suporta uma ampla gama de linguagens de programação e vem com recursos como depuração, controle de versão integrado, e extensões.
+
+### Kali Linux Ferramentas
+- **feh**: Um visualizador de imagens leve e rápido para o X11.
+- **hexyl**: Um visualizador de arquivos hexadecimal que exibe o conteúdo de arquivos em formato hexadecimal.
+- **file**: Um utilitário de linha de comando que determina o tipo de um arquivo.
+- **binwalk**: Uma ferramenta para análise de firmware e extração de dados embutidos em arquivos binários.
+- **xxd**: Um utilitário que cria um dump hexadecimal de um arquivo ou converte um dump hexadecimal de volta para binário.
+- **hd**: Um comando que exibe o conteúdo de arquivos em formato hexadecimal.
+- **stegseek**: Uma ferramenta para quebrar senhas de arquivos de esteganografia, como imagens que contêm dados ocultos.
+
+Essas ferramentas são amplamente utilizadas em segurança da informação e análise forense para inspecionar, analisar e manipular arquivos binários e imagens.
+
+### Bash
+Bash (Bourne Again Shell) é um interpretador de comandos e linguagem de script para sistemas Unix e Linux. Ele é amplamente utilizado para automação de tarefas, gerenciamento de sistemas e execução de comandos em linha de comando.
+
+#!markdown
+
+## Base torica
+    
+- https://pt.wikipedia.org/wiki/JPEG_File_Interchange_Format
+- https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
+
+#!markdown
+
+![alt text](./images/JFIF%20file%20structure.png)
+
+#!markdown
+
+![alt text](./images/jpeg_desc.jpeg)
+
+#!pwsh
+
+rm -rf ./artefato/_disco.extracted -rf
+rm -rf ./artefato/disco_clean
+
+#!pwsh
+
+strings ./artefato/disco | tail 
+
+#!pwsh
+
+binwalk ./artefato/disco
+
+#!pwsh
+
+binwalk --dd=".*" ./artefato/disco
+
+#!pwsh
+
+feh ./artefato/_disco.extracted/71EE
+
+#!pwsh
+
+file ./artefato/_disco.extracted/71EE
+
+#!fsharp
+
+open System.IO
+let rm_bytes input_file output_file bytes_to_remove = 
+    use output_file = new FileStream(output_file, FileMode.Create)
+    use input_file = new FileStream(input_file, FileMode.Open)
+    let len_cp = input_file.Length - bytes_to_remove |> int32
+    input_file.CopyTo(output_file, len_cp )
+    output_file.Close() 
+let concat_files (outputFile: string) (inputFiles: string list) =
+    use fileStream = new FileStream(outputFile, FileMode.Create)
+    for inputFile in inputFiles do
+        use input = new FileStream(inputFile, FileMode.Open)
+        input.CopyTo(fileStream)
+    printfn "Files concatenated to %s" outputFile
+rm_bytes "./artefato/disco" "./artefato/disco_clean" 0x290
+concat_files "./artefato/imagem.jpg" ["./artefato/_disco.extracted/71EE"; "./artefato/disco_clean"]
+
+#!fsharp
+
+ 
+let concat_files (outputFile: string) (inputFiles: string list) =
+    use fileStream = new FileStream(outputFile, FileMode.Create)
+    for inputFile in inputFiles do
+        use input = new FileStream(inputFile, FileMode.Open)
+        input.CopyTo(fileStream)
+    printfn "Files concatenated to %s" outputFile
+rm_bytes "./artefato/disco" "./artefato/disco_clean" 0x290
+concat_files "./artefato/imagem.jpg" ["./artefato/_disco.extracted/71EE"; "./artefato/disco_clean"]
+
+#!pwsh
+
+stegseek ./artefato/imagem.jpg
+cat ./imagem.jpg.out

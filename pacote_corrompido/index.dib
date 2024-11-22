@@ -1,0 +1,43 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"fsharp","name":"fsharp"}]}}
+
+#!markdown
+
+# Enunciados | Pacote Corrompido
+O PCAP encontra-se corrompido e, não está permitindo descobrir o usuário e qual será o banco acessado,
+
+Diante do exposto, faça à análise e responda no formato de flag. FIAP{user_banco}
+
+<img src="images/enunciado.png" width="400" >
+
+#!markdown
+
+# Ferramentas 
+- strings
+- wireshark
+- tshark
+- GitHub Copilot
+- vscode
+
+#!markdown
+
+# Conhecimento base
+- Tls SSL handshake 
+- MySql Protocol 
+
+#!pwsh
+
+strings ./artefato/secreto.pcapng | tail -n 1 > tls_logfile.txt
+
+#!pwsh
+
+cat tls_logfile.txt
+
+#!pwsh
+
+wireshark ./artefato/secreto.pcapng
+
+#!pwsh
+
+FIAP{test_testdb}

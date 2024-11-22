@@ -1,0 +1,138 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.27
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://138.197.91.116/ [138.197.91.116]
+[32m[+][0m Started: Thu Nov 21 21:29:30 2024
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Apache/2.4.62 (Debian)
+ |  - X-Powered-By: PHP/8.1.31
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://138.197.91.116/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: http://138.197.91.116/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://138.197.91.116/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[34m[i][0m The WordPress version could not be detected.
+
+[32m[+][0m WordPress theme in use: nifto
+ | Location: http://138.197.91.116/wp-content/themes/nifto/
+ | Readme: http://138.197.91.116/wp-content/themes/nifto/readme.txt
+ | Style URL: http://138.197.91.116/wp-content/themes/nifto/style.css?ver=6.7.1
+ | Style Name: Nifto
+ | Style URI: https://getmasum.com/themes-wp/nifto
+ | Description: NFT Creator WordPress Theme...
+ | Author: Themesvila
+ | Author URI: https://www.templatemonster.com/authors/themesvila/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0.0 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://138.197.91.116/wp-content/themes/nifto/style.css?ver=6.7.1, Match: 'Version: 1.0.0'
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m No themes Found.
+
+
+[34m[i][0m No Timthumbs Found.
+
+
+[34m[i][0m No Config Backups Found.
+
+
+[34m[i][0m No DB Exports Found.
+
+
+[34m[i][0m No Medias Found.
+
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m bartell.maribel
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m mayert.noemy
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m lola.oreilly
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m laisha.pouros
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m hobart.gerhold
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[32m[+][0m bartell-maribel
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m hobart-gerhold
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m laisha-pouros
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m lola-oreilly
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m mayert-noemy
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+
+[32m[+][0m neo
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://138.197.91.116/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ | Confirmed By:
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+

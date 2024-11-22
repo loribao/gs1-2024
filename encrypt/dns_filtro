@@ -1,0 +1,106 @@
+tshark -r decrypt.pcap -Y "dns"               
+Warning: program compiled against libxml 212 using older 209
+ 3114   8.559671 192.168.19.245 → 192.168.19.1 DNS 113 Standard query 0x334e A 13-courier.push.apple.com
+ 3118   8.561220 192.168.19.1 → 192.168.19.245 DNS 113 Standard query response 0x334e Refused A 13-courier.push.apple.com
+ 3291   9.600121 192.168.19.245 → 192.168.19.1 DNS 113 Standard query 0x16bc A 43-courier.push.apple.com
+ 3295   9.601674 192.168.19.1 → 192.168.19.245 DNS 113 Standard query response 0x16bc Refused A 43-courier.push.apple.com
+ 3584  11.207423 192.168.19.245 → 192.168.19.1 DNS 102 Standard query 0xd672 A g.whatsapp.net
+ 3588  11.208453 192.168.19.1 → 192.168.19.245 DNS 102 Standard query response 0xd672 Refused A g.whatsapp.net
+ 3613  11.803448 192.168.19.245 → 8.8.8.8      DNS 102 Standard query 0x2221 A g.whatsapp.net
+ 3618  11.804484 192.168.19.1 → 192.168.19.245 ICMP 130 Destination unreachable (Network unreachable)
+ 5804  27.206903 192.168.19.245 → 192.168.19.1 DNS 112 Standard query 0x492a A 7-courier.push.apple.com
+ 5808  27.207942 192.168.19.1 → 192.168.19.245 DNS 112 Standard query response 0x492a Refused A 7-courier.push.apple.com
+16484  79.109622 192.168.19.245 → 192.168.19.1 DNS 113 Standard query 0x2318 A 18-courier.push.apple.com
+16488  79.110660 192.168.19.1 → 192.168.19.245 DNS 113 Standard query response 0x2318 Refused A 18-courier.push.apple.com
+27839 125.459318 192.168.19.245 → 192.168.19.1 DNS 113 Standard query 0xd564 A 29-courier.push.apple.com
+27843 125.460869 192.168.19.1 → 192.168.19.245 DNS 113 Standard query response 0xd564 Refused A 29-courier.push.apple.com
+27866 126.502837 192.168.19.245 → 192.168.19.1 DNS 113 Standard query 0x6a4c A 11-courier.push.apple.com
+27870 126.502853 192.168.19.1 → 192.168.19.245 DNS 113 Standard query response 0x6a4c Refused A 11-courier.push.apple.com
+53486 182.605244 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0x325a A www.icloud.com
+53488 182.605245 192.168.3.245 → 192.168.3.1  DNS 101 Standard query 0x3d5b A www.apple.com
+53490 182.605244 192.168.3.245 → 192.168.3.1  DNS 97 Standard query 0x4879 A apple.com
+53492 182.605244 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0x38bf A imap.gmail.com
+53494 182.605241 192.168.3.245 → 192.168.3.1  DNS 131 Standard query 0x9f3e SRV _bookmarkdavs._tcp.p29-bookmarks.icloud.com
+53496 182.605757 192.168.3.245 → 192.168.3.1  DNS 107 Standard query 0xd7c4 A calendar.google.com
+53498 182.605756 192.168.3.245 → 192.168.3.1  DNS 105 Standard query 0x848d A captive.apple.com
+53502 182.611397  192.168.3.1 → 192.168.3.245 DNS 102 Standard query response 0x325a Refused A www.icloud.com
+53505 182.616006  192.168.3.1 → 192.168.3.245 DNS 97 Standard query response 0x4879 Refused A apple.com
+53508 182.616517  192.168.3.1 → 192.168.3.245 DNS 131 Standard query response 0x9f3e Refused SRV _bookmarkdavs._tcp.p29-bookmarks.icloud.com
+53510 182.617542  192.168.3.1 → 192.168.3.245 DNS 105 Standard query response 0x848d Refused A captive.apple.com
+55303 183.643638 192.168.3.245 → 192.168.3.1  DNS 112 Standard query 0x427a A p29-bookmarks.icloud.com
+55314 183.648776  192.168.3.1 → 192.168.3.245 DNS 112 Standard query response 0x427a Refused A p29-bookmarks.icloud.com
+79601 197.691840 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0xfbd4 A www.google.com
+79611 197.700035  192.168.3.1 → 192.168.3.245 DNS 118 Standard query response 0xfbd4 A www.google.com A 192.168.3.27
+88248 202.682108 192.168.3.245 → 192.168.3.1  DNS 113 Standard query 0x180c A 23-courier.push.apple.com
+88254 202.684675  192.168.3.1 → 192.168.3.245 DNS 113 Standard query response 0x180c Refused A 23-courier.push.apple.com
+89981 203.708741  192.168.3.1 → 192.168.3.245 DNS 113 Standard query response 0x358e Refused A 26-courier.push.apple.com
+163689 247.392256 192.168.3.245 → 192.168.3.1  DNS 114 Standard query 0x806d A app-analytics.snapchat.com
+163701 247.397887 192.168.3.245 → 192.168.3.1  DNS 104 Standard query 0x7aa4 A mvm.snapchat.com
+163787 247.438342  192.168.3.1 → 192.168.3.245 DNS 156 Standard query response 0x7ce6 A app.snapchat.com CNAME feelinsonice.l.google.com A 216.239.36.126
+163789 247.438343  192.168.3.1 → 192.168.3.245 DNS 130 Standard query response 0x806d A app-analytics.snapchat.com A 35.186.197.135
+163799 247.443973  192.168.3.1 → 192.168.3.245 DNS 160 Standard query response 0x7aa4 A mvm.snapchat.com CNAME feelinsonice-mvm.l.google.com A 216.239.36.126
+165064 248.174654 192.168.3.245 → 192.168.3.1  DNS 120 Standard query 0xd221 A us-central1-gcp.api.snapchat.com
+172162 252.430146  192.168.3.1 → 192.168.3.245 DNS 334 Standard query response 0x0527 A 21-courier.push.apple.com CNAME 21.courier-push-apple.com.akadns.net CNAME apac-in-courier-4.push-apple.com.akadns.net A 17.242.12.37 A 17.242.12.90 A 17.242.12.91 A 17.242.12.81 A 17.242.12.20 A 17.242.12.80 A 17.242.12.9 A 17.242.12.36
+173635 253.234561 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0xb7fc A www.icloud.com
+173645 253.239681 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0x3905 A imap.gmail.com
+173659 253.246335 192.168.3.245 → 192.168.3.1  DNS 97 Standard query 0x939c A apple.com
+173737 253.289859  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173738 253.289858  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173746 253.293443  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173747 253.293443  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173768 253.302146  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173770 253.303170  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173771 253.303169  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173790 253.311363  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173791 253.311362  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173816 253.327234  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173817 253.327234  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173819 253.329276  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173822 253.332352  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173825 253.334400  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173827 253.335936  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173829 253.337468  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173831 253.339004  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173832 253.341052  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173839 253.346176  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173856 253.354876  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.172.224.47 A 17.178.96.59 A 17.142.160.59
+173859 253.355906  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173860 253.355906  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173872 253.361025  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173873 253.361026  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173882 253.364610  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173892 253.368708  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173893 253.368705  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173904 253.372290  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173906 253.374850  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173926 253.383036  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173927 253.385600  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173928 253.389692  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173929 253.392252  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173930 253.394816  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173931 253.396860  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173941 253.408124  192.168.3.1 → 192.168.3.245 DNS 231 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+173952 253.413762  192.168.3.1 → 192.168.3.245 DNS 252 Standard query response 0x76f8 A www.apple.com CNAME www.apple.com.edgekey.net CNAME www.apple.com.edgekey.net.globalredir.akadns.net CNAME e6858.dsce9.akamaiedge.net A 23.200.231.157
+175414 254.281152 192.168.3.245 → 192.168.3.1  DNS 102 Standard query 0xb7fc A www.icloud.com
+175416 254.281153 192.168.3.245 → 192.168.3.1  DNS 97 Standard query 0x939c A apple.com
+175422 254.284739  192.168.3.1 → 192.168.3.245 DNS 237 Standard query response 0xb7fc A www.icloud.com CNAME www-cdn.icloud.com.akadns.net CNAME www.icloud.com.edgekey.net CNAME e4478.a.akamaiedge.net A 104.110.78.61
+175424 254.284738  192.168.3.1 → 192.168.3.245 DNS 145 Standard query response 0x939c A apple.com A 17.142.160.59 A 17.178.96.59 A 17.172.224.47
+236606 347.240189 192.168.3.245 → 192.168.3.1  DNS 106 Standard query 0xcfff A time-ios.apple.com
+237136 348.241215 192.168.3.245 → 192.168.3.1  DNS 106 Standard query 0xcfff A time-ios.apple.com
+237219 348.344130  192.168.3.1 → 192.168.3.245 DNS 187 Standard query response 0xcfff A time-ios.apple.com CNAME time-ios.g.aaplimg.com A 17.253.82.125 A 17.253.82.253 A 17.253.84.123
+249144 424.310335 192.168.3.245 → 192.168.3.1  DNS 101 Standard query 0xe971 A instagram.com
+249146 424.310335 192.168.3.245 → 192.168.3.1  DNS 110 Standard query 0x7410 A edge-mqtt.facebook.com
+249161 424.529983 192.168.3.245 → 192.168.3.1  DNS 103 Standard query 0xd083 A i.instagram.com
+249515 425.006208 192.168.3.245 → 192.168.3.1  DNS 106 Standard query 0xe11b A graph.facebook.com
+249934 425.761476  192.168.3.1 → 192.168.3.245 DNS 229 Standard query response 0xe971 A instagram.com A 18.214.164.188 A 23.22.202.23 A 34.192.92.212 A 34.195.228.241 A 34.196.59.172 A 34.197.152.200 A 34.198.162.82 A 18.213.252.4
+250108 426.009791 192.168.3.245 → 192.168.3.1  DNS 106 Standard query 0xe11b A graph.facebook.com
+250136 426.121409  192.168.3.1 → 192.168.3.245 DNS 164 Standard query response 0xe11b A graph.facebook.com CNAME api.facebook.com CNAME star.c10r.facebook.com A 31.13.79.18
+250410 426.791679 192.168.3.245 → 192.168.3.1  DNS 119 Standard query 0x1c9b A instagram.fdel1-2.fna.fbcdn.net
+251328 428.484417  192.168.3.1 → 192.168.3.245 DNS 135 Standard query response 0x1c9b A instagram.fdel1-2.fna.fbcdn.net A 157.240.189.96
+253042 432.598591 192.168.3.245 → 192.168.3.1  DNS 119 Standard query 0x93ea A instagram.fdel1-4.fna.fbcdn.net
+253142 433.600128 192.168.3.245 → 192.168.3.1  DNS 119 Standard query 0x93ea A instagram.fdel1-4.fna.fbcdn.net
+253194 434.295495  192.168.3.1 → 192.168.3.245 DNS 135 Standard query response 0x93ea A instagram.fdel1-4.fna.fbcdn.net A 157.240.189.225
+255250 440.529471 192.168.3.245 → 192.168.3.1  DNS 107 Standard query 0x092b A graph.instagram.com
+257555 446.742015 192.168.3.245 → 192.168.3.1  DNS 119 Standard query 0xe539 A instagram.fdel1-1.fna.fbcdn.net
+257778 447.744575 192.168.3.245 → 192.168.3.1  DNS 119 Standard query 0xe539 A instagram.fdel1-1.fna.fbcdn.net
+258379 453.472642  192.168.3.1 → 192.168.3.245 DNS 135 Standard query response 0xe539 A instagram.fdel1-1.fna.fbcdn.net A 157.240.189.32

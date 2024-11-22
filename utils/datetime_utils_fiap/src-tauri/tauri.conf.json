@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "fiap_utils_keep_time",
+  "version": "0.1.0",
+  "identifier": "com.fiap.utils.keep.time.app",
+  "build": {
+    "beforeDevCommand": "deno task dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "deno task build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "fiap_utils_keep_time",
+        "width": 500,
+        "height": 200,
+        "dragDropEnabled": false,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "transparent": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "Utility",
+    "shortDescription": "fiap_utils_keep_time",
+    "longDescription": "fiap_utils_keep_time"
+  }
+}
